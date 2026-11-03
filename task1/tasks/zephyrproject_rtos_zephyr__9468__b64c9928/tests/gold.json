@@ -1,0 +1,7 @@
+{
+  "case_id": "zephyrproject_rtos_zephyr__9468__b64c9928",
+  "gold_sha": "3c7f990367f38c84b20e7888042ea9429cfae8a6",
+  "cutoff_sha": "d66e8077cef9c22f5dc09628ae1436a529a35472",
+  "view_digest": "18bf578a590ca02e1c98da07739d605f1b204916f4539959a1a9bdb892ca792e",
+  "future_probe_sha": "734eda39f5868207bb6a9d0eba346d24e153eba3"
+}

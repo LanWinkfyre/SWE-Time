@@ -1,0 +1,7 @@
+{
+  "case_id": "microsoft_vscode__222193__b78a7631",
+  "gold_sha": "f6f90e016301f288ac5b36936d15ff8af9d70923",
+  "cutoff_sha": "37898a5689f24f6fb14e4942eb2a18ead0eb4358",
+  "view_digest": "c326f80dff246b5fa5231ebb915e0ccc484efefad5f3ae6468ebf83d8f21077a",
+  "future_probe_sha": "08c88cee367ada58c34f852b6cded88dfe321499"
+}

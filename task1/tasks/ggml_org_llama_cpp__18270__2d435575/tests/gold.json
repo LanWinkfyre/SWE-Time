@@ -1,0 +1,7 @@
+{
+  "case_id": "ggml_org_llama_cpp__18270__2d435575",
+  "gold_sha": "b1f3a6e5db7b782ef077bd0e8253ce03283b1f37",
+  "cutoff_sha": "e1f15b454fbadfddf8f1ec450bf6d390d9db7adb",
+  "view_digest": "44a5ad747ff87dcc7d4c9d8fbcf97ba33e923902a289bdc32b2456a1f63bcc33",
+  "future_probe_sha": "147a5216363c5b2edcdeb17f01ef3b28372ec872"
+}

@@ -1,0 +1,6 @@
+{
+  "case_id": "giampaolo_psutil__2573__a5b9e78",
+  "gold_activated_workflows": [
+    ".github/workflows/docs.yml"
+  ]
+}

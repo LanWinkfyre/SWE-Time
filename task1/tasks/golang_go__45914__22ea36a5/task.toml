@@ -1,0 +1,36 @@
+schema_version = "1.2"
+artifacts = ["/logs/verifier/detail.json"]
+
+[task]
+name        = "swe-time-backward/golang_go__45914__22ea36a5"
+description = "Find the commit that introduced the regression reported in golang/go#45914"
+keywords    = ["swe-time", "backward", "regression-localization", "golang/go"]
+
+[metadata]
+benchmark  = "swe-time-backward"
+case_id    = "golang_go__45914__22ea36a5"
+repo       = "golang/go"
+issue_id   = "45914"
+cutoff_sha = "abb110bf3de82f85aefe0fb284cc9359488b5f09"
+locality   = "Cross"
+boundary   = "High"
+subset     = "S4"
+
+[verifier]
+timeout_sec  = 900.0
+network_mode = "no-network"
+
+[agent]
+timeout_sec = 3600.0
+
+[environment]
+build_timeout_sec = 3600.0
+workdir           = "/testbed"
+cpus              = 4
+memory_mb         = 16384
+storage_mb        = 4096
+# The agent may reach only the hosts passed at run time with --allow-agent-host
+# (your model API) and --allow-environment-host (agent install sources).  The answer is
+# public on GitHub, so the default must not be open egress.
+network_mode      = "allowlist"
+allowed_hosts     = []

@@ -1,0 +1,11 @@
+{
+  "case_id": "mudler_LocalAI__9601__9c4c3f9",
+  "gold_activated_workflows": [
+    ".github/workflows/backend_pr.yml",
+    ".github/workflows/build-test.yaml",
+    ".github/workflows/image-pr.yml",
+    ".github/workflows/lint.yml",
+    ".github/workflows/test-extra.yml",
+    ".github/workflows/yaml-check.yml"
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "case_id": "nodejs_node__42969__31485b3f",
+  "gold_sha": "e86a6383054623e5168384a83d8cd6ebfe1fb584",
+  "cutoff_sha": "a5b87305255f4757545b1d9f60a5e6f94cb742c8",
+  "view_digest": "b8a4187da26ead147ed163cebd8d79a3dd737c54a713b9034d23356330b46605",
+  "future_probe_sha": "7ff2170f3660f60656a13476969e6cc9bb96b7d9"
+}

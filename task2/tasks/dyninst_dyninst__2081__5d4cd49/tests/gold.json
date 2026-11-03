@@ -1,0 +1,9 @@
+{
+  "case_id": "dyninst_dyninst__2081__5d4cd49",
+  "gold_activated_workflows": [
+    ".github/workflows/binary-tests.yaml",
+    ".github/workflows/codegen-cross-build.yaml",
+    ".github/workflows/libabigail.yaml",
+    ".github/workflows/pr-tests.yaml"
+  ]
+}

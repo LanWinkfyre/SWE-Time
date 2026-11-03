@@ -1,0 +1,36 @@
+schema_version = "1.2"
+artifacts = ["/logs/verifier/detail.json"]
+
+[task]
+name        = "swe-time-backward/ggml_org_llama_cpp__2922__84d2983b"
+description = "Find the commit that introduced the regression reported in ggml-org/llama.cpp#2922"
+keywords    = ["swe-time", "backward", "regression-localization", "ggml-org/llama.cpp"]
+
+[metadata]
+benchmark  = "swe-time-backward"
+case_id    = "ggml_org_llama_cpp__2922__84d2983b"
+repo       = "ggml-org/llama.cpp"
+issue_id   = "2922"
+cutoff_sha = "8afe2280009ecbfc9de2c93b8f41283dc810609a"
+locality   = "Cross"
+boundary   = "Low"
+subset     = "S2"
+
+[verifier]
+timeout_sec  = 900.0
+network_mode = "no-network"
+
+[agent]
+timeout_sec = 3600.0
+
+[environment]
+build_timeout_sec = 3600.0
+workdir           = "/testbed"
+cpus              = 4
+memory_mb         = 16384
+storage_mb        = 4096
+# The agent may reach only the hosts passed at run time with --allow-agent-host
+# (your model API) and --allow-environment-host (agent install sources).  The answer is
+# public on GitHub, so the default must not be open egress.
+network_mode      = "allowlist"
+allowed_hosts     = []

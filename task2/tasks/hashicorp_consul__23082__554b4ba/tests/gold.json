@@ -1,0 +1,16 @@
+{
+  "case_id": "hashicorp_consul__23082__554b4ba",
+  "gold_activated_workflows": [
+    ".github/workflows/backport-checker.yml",
+    ".github/workflows/bot-auto-approve.yaml",
+    ".github/workflows/build-distros.yml",
+    ".github/workflows/changelog-checker.yml",
+    ".github/workflows/embedded-asset-checker.yml",
+    ".github/workflows/go-tests.yml",
+    ".github/workflows/goldenfile-checker.yml",
+    ".github/workflows/pr-metrics-test-checker.yml",
+    ".github/workflows/security-scan.yml",
+    ".github/workflows/test-integrations.yml",
+    ".github/workflows/verify-ci.yml"
+  ]
+}

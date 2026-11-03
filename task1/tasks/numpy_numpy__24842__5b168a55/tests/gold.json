@@ -1,0 +1,7 @@
+{
+  "case_id": "numpy_numpy__24842__5b168a55",
+  "gold_sha": "4ec0182597695ba9a63bf4435882117bdc79b872",
+  "cutoff_sha": "5ca26b1b9df5e8c89923a2bb723a5ab95b6fe09b",
+  "view_digest": "df972d255497318d63874926f51e61e9567f2f43820edd6c071975f053a82deb",
+  "future_probe_sha": "877522813effd8b052a3a3db8a51e5bad93d7540"
+}

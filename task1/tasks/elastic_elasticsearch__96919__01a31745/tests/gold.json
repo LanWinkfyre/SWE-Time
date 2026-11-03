@@ -1,0 +1,7 @@
+{
+  "case_id": "elastic_elasticsearch__96919__01a31745",
+  "gold_sha": "994e92707fe6cc70cc79c1352ac815e8f44e4b00",
+  "cutoff_sha": "97fd810757fd28ef1eb82776cf4c97ef894e8ad9",
+  "view_digest": "00cd739d1f3e03eb532b1163fb9e69f8a45353ef21db814ea452c849e29ace09",
+  "future_probe_sha": "52bd463e8d73eecff8e61523b85517704fe948c2"
+}

@@ -1,0 +1,36 @@
+schema_version = "1.2"
+artifacts = ["/logs/verifier/detail.json"]
+
+[task]
+name        = "swe-time-backward/llvm_llvm_project__61268__864092de"
+description = "Find the commit that introduced the regression reported in llvm/llvm-project#61268"
+keywords    = ["swe-time", "backward", "regression-localization", "llvm/llvm-project"]
+
+[metadata]
+benchmark  = "swe-time-backward"
+case_id    = "llvm_llvm_project__61268__864092de"
+repo       = "llvm/llvm-project"
+issue_id   = "61268"
+cutoff_sha = "e65cd4ce832b52d7b625a1e01cbecb264f9d2716"
+locality   = "Local"
+boundary   = "High"
+subset     = "S3"
+
+[verifier]
+timeout_sec  = 900.0
+network_mode = "no-network"
+
+[agent]
+timeout_sec = 3600.0
+
+[environment]
+build_timeout_sec = 3600.0
+workdir           = "/testbed"
+cpus              = 4
+memory_mb         = 16384
+storage_mb        = 9216
+# The agent may reach only the hosts passed at run time with --allow-agent-host
+# (your model API) and --allow-environment-host (agent install sources).  The answer is
+# public on GitHub, so the default must not be open egress.
+network_mode      = "allowlist"
+allowed_hosts     = []

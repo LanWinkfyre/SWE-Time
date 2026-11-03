@@ -1,0 +1,42 @@
+schema_version = "1.2"
+artifacts = ["/logs/verifier/detail.json"]
+
+[task]
+name        = "swe-time-forward/NVIDIA_NemoClaw__11058__2f535d3"
+description = "Predict which CI workflows the fix for NVIDIA/NemoClaw#11058 activates"
+keywords    = ["swe-time", "forward", "ci-routing", "NVIDIA/NemoClaw"]
+
+[metadata]
+benchmark = "swe-time-forward"
+case_id   = "NVIDIA_NemoClaw__11058__2f535d3"
+repo      = "NVIDIA/NemoClaw"
+issue_id  = "11058"
+base_sha  = "2f535d32e82ecf5291d09611a91cc56fbb6e6ea0"
+temporal  = "T_high"
+spatial   = "S_high"
+
+[metadata.event_context]
+activity                  = "pull_request_update"
+action                    = "synchronize"
+base_ref                  = "main"
+draft                     = false
+activation_scope          = "direct"
+eligible_trigger_families = ["pull_request", "pull_request_target"]
+
+[verifier]
+timeout_sec  = 900.0
+network_mode = "no-network"
+
+[agent]
+timeout_sec = 3600.0
+
+[environment]
+build_timeout_sec = 1800.0
+workdir           = "/testbed"
+cpus              = 4
+memory_mb         = 8192
+# The agent may reach only the hosts passed at run time with --allow-agent-host
+# (your model API) and --allow-environment-host (agent install sources).  The fixing
+# pull request is public on GitHub, so the default must not be open egress.
+network_mode      = "allowlist"
+allowed_hosts     = []

@@ -1,0 +1,7 @@
+{
+  "case_id": "clickhouse_clickhouse__44496__9ad500ab",
+  "gold_sha": "690ec74bf235bd7c84b88acb8820f8d6efff9ec2",
+  "cutoff_sha": "f01fbc96817c0f4dca15c3418d444776b9221706",
+  "view_digest": "801ff869937ebaf8a99672a7a6a17ea87349ec426dda4f33b490f067a625ced5",
+  "future_probe_sha": "de33901c55c99052076877800d75c516488ae028"
+}

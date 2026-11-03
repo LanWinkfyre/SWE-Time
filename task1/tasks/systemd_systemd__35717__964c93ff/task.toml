@@ -1,0 +1,36 @@
+schema_version = "1.2"
+artifacts = ["/logs/verifier/detail.json"]
+
+[task]
+name        = "swe-time-backward/systemd_systemd__35717__964c93ff"
+description = "Find the commit that introduced the regression reported in systemd/systemd#35717"
+keywords    = ["swe-time", "backward", "regression-localization", "systemd/systemd"]
+
+[metadata]
+benchmark  = "swe-time-backward"
+case_id    = "systemd_systemd__35717__964c93ff"
+repo       = "systemd/systemd"
+issue_id   = "35717"
+cutoff_sha = "7655550a49056dffaf7e834386ff4cc59bfb4f1a"
+locality   = "Cross"
+boundary   = "Low"
+subset     = "S2"
+
+[verifier]
+timeout_sec  = 900.0
+network_mode = "no-network"
+
+[agent]
+timeout_sec = 3600.0
+
+[environment]
+build_timeout_sec = 3600.0
+workdir           = "/testbed"
+cpus              = 4
+memory_mb         = 16384
+storage_mb        = 4096
+# The agent may reach only the hosts passed at run time with --allow-agent-host
+# (your model API) and --allow-environment-host (agent install sources).  The answer is
+# public on GitHub, so the default must not be open egress.
+network_mode      = "allowlist"
+allowed_hosts     = []

@@ -1,0 +1,7 @@
+{
+  "case_id": "cockroachdb_cockroach__129369__9ce4272d",
+  "gold_sha": "0702e865fec87b4afa1254aa9c43b6b644c23771",
+  "cutoff_sha": "cea63881b16ab19260a590e2dbf4f405881bd70e",
+  "view_digest": "69d3d3bb6753bbb02a75f2d23d6902b244348a7d0de401fe3b95cbe3ccd8367a",
+  "future_probe_sha": "f1a5aa8a633636138fededdf46a8dcc20f899a48"
+}

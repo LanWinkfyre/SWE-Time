@@ -1,0 +1,11 @@
+{
+  "activity": "pull_request_update",
+  "action": "synchronize",
+  "draft": false,
+  "activation_scope": "direct",
+  "eligible_trigger_families": [
+    "pull_request",
+    "pull_request_target"
+  ],
+  "base_ref": "main"
+}

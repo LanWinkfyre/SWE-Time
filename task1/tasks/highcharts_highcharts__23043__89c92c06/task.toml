@@ -1,0 +1,36 @@
+schema_version = "1.2"
+artifacts = ["/logs/verifier/detail.json"]
+
+[task]
+name        = "swe-time-backward/highcharts_highcharts__23043__89c92c06"
+description = "Find the commit that introduced the regression reported in highcharts/highcharts#23043"
+keywords    = ["swe-time", "backward", "regression-localization", "highcharts/highcharts"]
+
+[metadata]
+benchmark  = "swe-time-backward"
+case_id    = "highcharts_highcharts__23043__89c92c06"
+repo       = "highcharts/highcharts"
+issue_id   = "23043"
+cutoff_sha = "420fc9c6f8b30b9fdccb42131020895ca08b19d4"
+locality   = "Cross"
+boundary   = "Low"
+subset     = "S2"
+
+[verifier]
+timeout_sec  = 900.0
+network_mode = "no-network"
+
+[agent]
+timeout_sec = 3600.0
+
+[environment]
+build_timeout_sec = 3600.0
+workdir           = "/testbed"
+cpus              = 4
+memory_mb         = 16384
+storage_mb        = 4096
+# The agent may reach only the hosts passed at run time with --allow-agent-host
+# (your model API) and --allow-environment-host (agent install sources).  The answer is
+# public on GitHub, so the default must not be open egress.
+network_mode      = "allowlist"
+allowed_hosts     = []

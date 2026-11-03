@@ -1,0 +1,7 @@
+{
+  "case_id": "vim_vim__17301__738a0bdd",
+  "gold_sha": "cb204e688e5c9d56a78b621ef27c35d91860cb09",
+  "cutoff_sha": "73440245361f3399b88c872236830da3086ad942",
+  "view_digest": "d48bf6edce0552107efe306d4cb2cf9de68ae0f821474c1134288279275dedd9",
+  "future_probe_sha": "d4110e06952be7d06ba39cf0434626bbd7301a9d"
+}

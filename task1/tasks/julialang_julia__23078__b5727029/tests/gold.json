@@ -1,0 +1,7 @@
+{
+  "case_id": "julialang_julia__23078__b5727029",
+  "gold_sha": "7de02a33f9c95178a8f5880dc39f0ced9d3c9e7b",
+  "cutoff_sha": "fb76529050cdf142ce6614b28d690fff560e8d3a",
+  "view_digest": "56ba8c5a8a740b1acd0b405c29322be72f01e8a834f9ef9ebeb0eecf47699405",
+  "future_probe_sha": "18da73e62f6ef7ae3e8acc0b10d109abacee814c"
+}

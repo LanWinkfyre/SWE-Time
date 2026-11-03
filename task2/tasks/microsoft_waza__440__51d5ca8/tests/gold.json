@@ -1,0 +1,9 @@
+{
+  "case_id": "microsoft_waza__440__51d5ca8",
+  "gold_activated_workflows": [
+    ".github/workflows/auto-merge.yml",
+    ".github/workflows/docker-ci.yml",
+    ".github/workflows/go-ci.yml",
+    ".github/workflows/squad-ci.yml"
+  ]
+}

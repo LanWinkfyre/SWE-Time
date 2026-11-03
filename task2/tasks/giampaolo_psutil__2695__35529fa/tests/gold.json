@@ -1,0 +1,7 @@
+{
+  "case_id": "giampaolo_psutil__2695__35529fa",
+  "gold_activated_workflows": [
+    ".github/workflows/build.yml",
+    ".github/workflows/docs.yml"
+  ]
+}

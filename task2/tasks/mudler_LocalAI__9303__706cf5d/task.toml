@@ -1,0 +1,42 @@
+schema_version = "1.2"
+artifacts = ["/logs/verifier/detail.json"]
+
+[task]
+name        = "swe-time-forward/mudler_LocalAI__9303__706cf5d"
+description = "Predict which CI workflows the fix for mudler/LocalAI#9303 activates"
+keywords    = ["swe-time", "forward", "ci-routing", "mudler/LocalAI"]
+
+[metadata]
+benchmark = "swe-time-forward"
+case_id   = "mudler_LocalAI__9303__706cf5d"
+repo      = "mudler/LocalAI"
+issue_id  = "9303"
+base_sha  = "706cf5d43c324184b8e1df6e8141ce335c591b31"
+temporal  = "T_high"
+spatial   = "S_low"
+
+[metadata.event_context]
+activity                  = "pull_request_update"
+action                    = "synchronize"
+base_ref                  = "master"
+draft                     = false
+activation_scope          = "direct"
+eligible_trigger_families = ["pull_request", "pull_request_target"]
+
+[verifier]
+timeout_sec  = 900.0
+network_mode = "no-network"
+
+[agent]
+timeout_sec = 3600.0
+
+[environment]
+build_timeout_sec = 1800.0
+workdir           = "/testbed"
+cpus              = 4
+memory_mb         = 8192
+# The agent may reach only the hosts passed at run time with --allow-agent-host
+# (your model API) and --allow-environment-host (agent install sources).  The fixing
+# pull request is public on GitHub, so the default must not be open egress.
+network_mode      = "allowlist"
+allowed_hosts     = []

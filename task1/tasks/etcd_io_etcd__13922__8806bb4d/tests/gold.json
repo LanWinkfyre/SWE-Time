@@ -1,0 +1,7 @@
+{
+  "case_id": "etcd_io_etcd__13922__8806bb4d",
+  "gold_sha": "1ea53d527e09382e32f3ef7ddc562b4e5a9c5d93",
+  "cutoff_sha": "0c9a4e0f93ad9a7d83e8f5ec215baa856616c76b",
+  "view_digest": "737862bddb65e9d8008567290a0edf91356fb3af4671a0b322a7a04edaee0717",
+  "future_probe_sha": "dd08e15d7c4750b1a94a8b4760a4de7fd14b0e78"
+}

@@ -1,0 +1,36 @@
+schema_version = "1.2"
+artifacts = ["/logs/verifier/detail.json"]
+
+[task]
+name        = "swe-time-backward/numpy_numpy__27054__0b7e2bc3"
+description = "Find the commit that introduced the regression reported in numpy/numpy#27054"
+keywords    = ["swe-time", "backward", "regression-localization", "numpy/numpy"]
+
+[metadata]
+benchmark  = "swe-time-backward"
+case_id    = "numpy_numpy__27054__0b7e2bc3"
+repo       = "numpy/numpy"
+issue_id   = "27054"
+cutoff_sha = "2459d80adf7d8e7c0c6debf72f5207a6ca37f264"
+locality   = "Local"
+boundary   = "Low"
+subset     = "S1"
+
+[verifier]
+timeout_sec  = 900.0
+network_mode = "no-network"
+
+[agent]
+timeout_sec = 3600.0
+
+[environment]
+build_timeout_sec = 3600.0
+workdir           = "/testbed"
+cpus              = 4
+memory_mb         = 16384
+storage_mb        = 4096
+# The agent may reach only the hosts passed at run time with --allow-agent-host
+# (your model API) and --allow-environment-host (agent install sources).  The answer is
+# public on GitHub, so the default must not be open egress.
+network_mode      = "allowlist"
+allowed_hosts     = []

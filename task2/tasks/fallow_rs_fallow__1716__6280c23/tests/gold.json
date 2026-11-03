@@ -1,0 +1,14 @@
+{
+  "case_id": "fallow_rs_fallow__1716__6280c23",
+  "gold_activated_workflows": [
+    ".github/workflows/allocs.yml",
+    ".github/workflows/bench.yml",
+    ".github/workflows/bloat.yml",
+    ".github/workflows/ci.yml",
+    ".github/workflows/commitlint.yml",
+    ".github/workflows/coupling.yml",
+    ".github/workflows/cross-arch.yml",
+    ".github/workflows/dependabot-auto-merge.yml",
+    ".github/workflows/ecosystem.yml"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "case_id": "cabinpkg_cabin__1237__427504d",
+  "gold_activated_workflows": [
+    ".github/workflows/ci.yml",
+    ".github/workflows/codeql.yml",
+    ".github/workflows/cpp.yml",
+    ".github/workflows/docker.yml",
+    ".github/workflows/docs.yml"
+  ]
+}

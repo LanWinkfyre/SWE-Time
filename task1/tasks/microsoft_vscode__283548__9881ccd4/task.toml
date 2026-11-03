@@ -1,0 +1,36 @@
+schema_version = "1.2"
+artifacts = ["/logs/verifier/detail.json"]
+
+[task]
+name        = "swe-time-backward/microsoft_vscode__283548__9881ccd4"
+description = "Find the commit that introduced the regression reported in microsoft/vscode#283548"
+keywords    = ["swe-time", "backward", "regression-localization", "microsoft/vscode"]
+
+[metadata]
+benchmark  = "swe-time-backward"
+case_id    = "microsoft_vscode__283548__9881ccd4"
+repo       = "microsoft/vscode"
+issue_id   = "283548"
+cutoff_sha = "a7cfff7ea03e94f9dade0742980de36fc56848a1"
+locality   = "Cross"
+boundary   = "Low"
+subset     = "S2"
+
+[verifier]
+timeout_sec  = 900.0
+network_mode = "no-network"
+
+[agent]
+timeout_sec = 3600.0
+
+[environment]
+build_timeout_sec = 3600.0
+workdir           = "/testbed"
+cpus              = 4
+memory_mb         = 16384
+storage_mb        = 4096
+# The agent may reach only the hosts passed at run time with --allow-agent-host
+# (your model API) and --allow-environment-host (agent install sources).  The answer is
+# public on GitHub, so the default must not be open egress.
+network_mode      = "allowlist"
+allowed_hosts     = []

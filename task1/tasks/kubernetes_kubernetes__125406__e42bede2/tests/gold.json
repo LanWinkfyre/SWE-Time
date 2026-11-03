@@ -1,0 +1,7 @@
+{
+  "case_id": "kubernetes_kubernetes__125406__e42bede2",
+  "gold_sha": "a8ef6e9f0104a44023162bb8229fb677ec80beb1",
+  "cutoff_sha": "d145bf09074fcd9b884daa582e0f19f60450a39d",
+  "view_digest": "91165c220c22fcf6f373268fc021991256b076563ee8d7471e0f40b909cab57d",
+  "future_probe_sha": "b0263baae51895058b64b8e6f510a22a14ed8d3d"
+}

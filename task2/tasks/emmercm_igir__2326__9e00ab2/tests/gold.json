@@ -1,0 +1,16 @@
+{
+  "case_id": "emmercm_igir__2326__9e00ab2",
+  "gold_activated_workflows": [
+    ".github/workflows/codecov.yml",
+    ".github/workflows/gh-dependabot-automerge.yml",
+    ".github/workflows/gh-label-sync.yml",
+    ".github/workflows/gh-pages.yml",
+    ".github/workflows/lint.yml",
+    ".github/workflows/node-compile.yml",
+    ".github/workflows/node-dependency-watchdog.yml",
+    ".github/workflows/node-test-package.yml",
+    ".github/workflows/node-test.yml",
+    ".github/workflows/pr-renamer.yml",
+    ".github/workflows/scoop-test.yml"
+  ]
+}

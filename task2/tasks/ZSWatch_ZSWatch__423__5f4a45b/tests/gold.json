@@ -1,0 +1,6 @@
+{
+  "case_id": "ZSWatch_ZSWatch__423__5f4a45b",
+  "gold_activated_workflows": [
+    ".github/workflows/ci.yml"
+  ]
+}

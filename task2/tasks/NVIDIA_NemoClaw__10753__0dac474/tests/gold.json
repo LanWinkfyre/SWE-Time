@@ -1,0 +1,16 @@
+{
+  "case_id": "NVIDIA_NemoClaw__10753__0dac474",
+  "gold_activated_workflows": [
+    ".github/workflows/code-scanning.yaml",
+    ".github/workflows/codebase-growth-guardrails.yaml",
+    ".github/workflows/commit-lint.yaml",
+    ".github/workflows/dco-check.yaml",
+    ".github/workflows/docs-cli-parity-pr.yaml",
+    ".github/workflows/docs-preview-pr.yaml",
+    ".github/workflows/installer-hash-check.yaml",
+    ".github/workflows/openshell-sdk-package-pr.yaml",
+    ".github/workflows/pr-review-advisor.yaml",
+    ".github/workflows/pr.yaml",
+    ".github/workflows/require-maintainer-edits.yaml"
+  ]
+}

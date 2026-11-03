@@ -1,0 +1,7 @@
+{
+  "case_id": "dotnet_runtime__121757__a42fb0c1",
+  "gold_sha": "23a83bc0954289d21ebd57008343f026379fffd2",
+  "cutoff_sha": "ea8d8a0339bdf8b736ef5706900bab48429d1cf6",
+  "view_digest": "de8e6bcb162bc632e3be230c58651510b18a5e0a1b872c991dc00588e4873feb",
+  "future_probe_sha": "bf7fe1d87bdb3a8b6ef6486bb03ae2f6928abf4f"
+}

@@ -1,0 +1,36 @@
+schema_version = "1.2"
+artifacts = ["/logs/verifier/detail.json"]
+
+[task]
+name        = "swe-time-backward/doxygen_doxygen__7585__6116faba"
+description = "Find the commit that introduced the regression reported in doxygen/doxygen#7585"
+keywords    = ["swe-time", "backward", "regression-localization", "doxygen/doxygen"]
+
+[metadata]
+benchmark  = "swe-time-backward"
+case_id    = "doxygen_doxygen__7585__6116faba"
+repo       = "doxygen/doxygen"
+issue_id   = "7585"
+cutoff_sha = "10b2b8fc694b60a17ccd2642f3a40c851e33b9da"
+locality   = "Cross"
+boundary   = "Low"
+subset     = "S2"
+
+[verifier]
+timeout_sec  = 900.0
+network_mode = "no-network"
+
+[agent]
+timeout_sec = 3600.0
+
+[environment]
+build_timeout_sec = 3600.0
+workdir           = "/testbed"
+cpus              = 4
+memory_mb         = 16384
+storage_mb        = 4096
+# The agent may reach only the hosts passed at run time with --allow-agent-host
+# (your model API) and --allow-environment-host (agent install sources).  The answer is
+# public on GitHub, so the default must not be open egress.
+network_mode      = "allowlist"
+allowed_hosts     = []

@@ -1,0 +1,36 @@
+schema_version = "1.2"
+artifacts = ["/logs/verifier/detail.json"]
+
+[task]
+name        = "swe-time-backward/cockroachdb_cockroach__143138__c1dbbb5d"
+description = "Find the commit that introduced the regression reported in cockroachdb/cockroach#143138"
+keywords    = ["swe-time", "backward", "regression-localization", "cockroachdb/cockroach"]
+
+[metadata]
+benchmark  = "swe-time-backward"
+case_id    = "cockroachdb_cockroach__143138__c1dbbb5d"
+repo       = "cockroachdb/cockroach"
+issue_id   = "143138"
+cutoff_sha = "8c96475bf1e5af4a90b521ab66e34e67cc7faccc"
+locality   = "Cross"
+boundary   = "Low"
+subset     = "S2"
+
+[verifier]
+timeout_sec  = 900.0
+network_mode = "no-network"
+
+[agent]
+timeout_sec = 3600.0
+
+[environment]
+build_timeout_sec = 3600.0
+workdir           = "/testbed"
+cpus              = 4
+memory_mb         = 16384
+storage_mb        = 6144
+# The agent may reach only the hosts passed at run time with --allow-agent-host
+# (your model API) and --allow-environment-host (agent install sources).  The answer is
+# public on GitHub, so the default must not be open egress.
+network_mode      = "allowlist"
+allowed_hosts     = []

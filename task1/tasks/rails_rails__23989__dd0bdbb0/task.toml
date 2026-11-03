@@ -1,0 +1,36 @@
+schema_version = "1.2"
+artifacts = ["/logs/verifier/detail.json"]
+
+[task]
+name        = "swe-time-backward/rails_rails__23989__dd0bdbb0"
+description = "Find the commit that introduced the regression reported in rails/rails#23989"
+keywords    = ["swe-time", "backward", "regression-localization", "rails/rails"]
+
+[metadata]
+benchmark  = "swe-time-backward"
+case_id    = "rails_rails__23989__dd0bdbb0"
+repo       = "rails/rails"
+issue_id   = "23989"
+cutoff_sha = "a408645223f81613b45366aa69d28584c37f17f8"
+locality   = "Cross"
+boundary   = "High"
+subset     = "S4"
+
+[verifier]
+timeout_sec  = 900.0
+network_mode = "no-network"
+
+[agent]
+timeout_sec = 3600.0
+
+[environment]
+build_timeout_sec = 3600.0
+workdir           = "/testbed"
+cpus              = 4
+memory_mb         = 16384
+storage_mb        = 4096
+# The agent may reach only the hosts passed at run time with --allow-agent-host
+# (your model API) and --allow-environment-host (agent install sources).  The answer is
+# public on GitHub, so the default must not be open egress.
+network_mode      = "allowlist"
+allowed_hosts     = []

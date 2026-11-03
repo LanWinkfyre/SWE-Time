@@ -1,0 +1,7 @@
+{
+  "case_id": "curl_curl__1174__7d987407",
+  "gold_sha": "cb4e2be7c6d42ca0780f8e0a747cecf9ba45f151",
+  "cutoff_sha": "00c817068ed9e73974b3fedf6b9d7cb085db69f4",
+  "view_digest": "fff55609255f703a3a1bb3325611930a81f682aa6607db038eae5669a8be5c07",
+  "future_probe_sha": "9aa259a139100c8d5b46b0ca9cc84bdf71e0e96b"
+}

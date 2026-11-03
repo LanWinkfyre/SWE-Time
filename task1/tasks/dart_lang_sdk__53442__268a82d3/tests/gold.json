@@ -1,0 +1,7 @@
+{
+  "case_id": "dart_lang_sdk__53442__268a82d3",
+  "gold_sha": "72e8b555aa192c393cbf9325e05c7a11a9c76918",
+  "cutoff_sha": "69afe5a40710f45e7d7a5d749ff31fc30832ed08",
+  "view_digest": "6d09afe7793906cca9070853223b12e634e3131354a6d1ded1d1f865ea1d179d",
+  "future_probe_sha": "ceaed93e3bb5688550343d1b7b07c282509ad80d"
+}

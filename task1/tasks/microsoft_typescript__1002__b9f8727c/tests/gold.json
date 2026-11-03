@@ -1,0 +1,7 @@
+{
+  "case_id": "microsoft_typescript__1002__b9f8727c",
+  "gold_sha": "8a765d7680fd44f17b070741f5f702688e063702",
+  "cutoff_sha": "5ce3baf339e0424263069c70f0ea239bc3cea96a",
+  "view_digest": "19297f6f03d02aaca376c1790bc7e3d7227d44d95a25257983169f18c2a2549e",
+  "future_probe_sha": "ddc08ba4679cfc8687dd8dd0da21d7f62e93d4f4"
+}

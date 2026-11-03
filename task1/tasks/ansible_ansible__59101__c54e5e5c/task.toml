@@ -1,0 +1,36 @@
+schema_version = "1.2"
+artifacts = ["/logs/verifier/detail.json"]
+
+[task]
+name        = "swe-time-backward/ansible_ansible__59101__c54e5e5c"
+description = "Find the commit that introduced the regression reported in ansible/ansible#59101"
+keywords    = ["swe-time", "backward", "regression-localization", "ansible/ansible"]
+
+[metadata]
+benchmark  = "swe-time-backward"
+case_id    = "ansible_ansible__59101__c54e5e5c"
+repo       = "ansible/ansible"
+issue_id   = "59101"
+cutoff_sha = "262c9ffdb6c995d67a8dfd3707ec8bb09a4fd77d"
+locality   = "Local"
+boundary   = "High"
+subset     = "S3"
+
+[verifier]
+timeout_sec  = 900.0
+network_mode = "no-network"
+
+[agent]
+timeout_sec = 3600.0
+
+[environment]
+build_timeout_sec = 3600.0
+workdir           = "/testbed"
+cpus              = 4
+memory_mb         = 16384
+storage_mb        = 4096
+# The agent may reach only the hosts passed at run time with --allow-agent-host
+# (your model API) and --allow-environment-host (agent install sources).  The answer is
+# public on GitHub, so the default must not be open egress.
+network_mode      = "allowlist"
+allowed_hosts     = []

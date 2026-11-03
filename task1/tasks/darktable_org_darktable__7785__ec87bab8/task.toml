@@ -1,0 +1,36 @@
+schema_version = "1.2"
+artifacts = ["/logs/verifier/detail.json"]
+
+[task]
+name        = "swe-time-backward/darktable_org_darktable__7785__ec87bab8"
+description = "Find the commit that introduced the regression reported in darktable-org/darktable#7785"
+keywords    = ["swe-time", "backward", "regression-localization", "darktable-org/darktable"]
+
+[metadata]
+benchmark  = "swe-time-backward"
+case_id    = "darktable_org_darktable__7785__ec87bab8"
+repo       = "darktable-org/darktable"
+issue_id   = "7785"
+cutoff_sha = "54e7e09eb172aa76faa870afbf238c45d7b77b96"
+locality   = "Local"
+boundary   = "High"
+subset     = "S3"
+
+[verifier]
+timeout_sec  = 900.0
+network_mode = "no-network"
+
+[agent]
+timeout_sec = 3600.0
+
+[environment]
+build_timeout_sec = 3600.0
+workdir           = "/testbed"
+cpus              = 4
+memory_mb         = 16384
+storage_mb        = 5120
+# The agent may reach only the hosts passed at run time with --allow-agent-host
+# (your model API) and --allow-environment-host (agent install sources).  The answer is
+# public on GitHub, so the default must not be open egress.
+network_mode      = "allowlist"
+allowed_hosts     = []

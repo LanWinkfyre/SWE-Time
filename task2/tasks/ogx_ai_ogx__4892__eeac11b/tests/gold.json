@@ -1,0 +1,15 @@
+{
+  "case_id": "ogx_ai_ogx__4892__eeac11b",
+  "gold_activated_workflows": [
+    ".github/workflows/integration-auth-tests.yml",
+    ".github/workflows/integration-tests.yml",
+    ".github/workflows/integration-vector-io-tests.yml",
+    ".github/workflows/pre-commit.yml",
+    ".github/workflows/pypi.yml",
+    ".github/workflows/semantic-pr.yml",
+    ".github/workflows/stainless-builds.yml",
+    ".github/workflows/test-external-provider-module.yml",
+    ".github/workflows/test-external.yml",
+    ".github/workflows/unit-tests.yml"
+  ]
+}

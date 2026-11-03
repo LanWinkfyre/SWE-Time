@@ -1,0 +1,42 @@
+schema_version = "1.2"
+artifacts = ["/logs/verifier/detail.json"]
+
+[task]
+name        = "swe-time-forward/data_prep_kit_data_prep_kit__1393__7c47035"
+description = "Predict which CI workflows the fix for data-prep-kit/data-prep-kit#1393 activates"
+keywords    = ["swe-time", "forward", "ci-routing", "data-prep-kit/data-prep-kit"]
+
+[metadata]
+benchmark = "swe-time-forward"
+case_id   = "data_prep_kit_data_prep_kit__1393__7c47035"
+repo      = "data-prep-kit/data-prep-kit"
+issue_id  = "1393"
+base_sha  = "7c4703555f9b2f35420704909c38f994d9650d94"
+temporal  = "T_high"
+spatial   = "S_high"
+
+[metadata.event_context]
+activity                  = "pull_request_update"
+action                    = "synchronize"
+base_ref                  = "dev"
+draft                     = false
+activation_scope          = "direct"
+eligible_trigger_families = ["pull_request", "pull_request_target"]
+
+[verifier]
+timeout_sec  = 900.0
+network_mode = "no-network"
+
+[agent]
+timeout_sec = 3600.0
+
+[environment]
+build_timeout_sec = 1800.0
+workdir           = "/testbed"
+cpus              = 4
+memory_mb         = 8192
+# The agent may reach only the hosts passed at run time with --allow-agent-host
+# (your model API) and --allow-environment-host (agent install sources).  The fixing
+# pull request is public on GitHub, so the default must not be open egress.
+network_mode      = "allowlist"
+allowed_hosts     = []

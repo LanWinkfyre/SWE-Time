@@ -1,0 +1,36 @@
+schema_version = "1.2"
+artifacts = ["/logs/verifier/detail.json"]
+
+[task]
+name        = "swe-time-backward/python_cpython__115832__e4a40e0b"
+description = "Find the commit that introduced the regression reported in python/cpython#115832"
+keywords    = ["swe-time", "backward", "regression-localization", "python/cpython"]
+
+[metadata]
+benchmark  = "swe-time-backward"
+case_id    = "python_cpython__115832__e4a40e0b"
+repo       = "python/cpython"
+issue_id   = "115832"
+cutoff_sha = "17dab2e572141a4295325bf7019301fece301fe1"
+locality   = "Cross"
+boundary   = "High"
+subset     = "S4"
+
+[verifier]
+timeout_sec  = 900.0
+network_mode = "no-network"
+
+[agent]
+timeout_sec = 3600.0
+
+[environment]
+build_timeout_sec = 3600.0
+workdir           = "/testbed"
+cpus              = 4
+memory_mb         = 16384
+storage_mb        = 4096
+# The agent may reach only the hosts passed at run time with --allow-agent-host
+# (your model API) and --allow-environment-host (agent install sources).  The answer is
+# public on GitHub, so the default must not be open egress.
+network_mode      = "allowlist"
+allowed_hosts     = []

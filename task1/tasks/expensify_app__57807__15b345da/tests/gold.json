@@ -1,0 +1,7 @@
+{
+  "case_id": "expensify_app__57807__15b345da",
+  "gold_sha": "24bb2a4b894c81917e22eef7f06828ac1f483ad8",
+  "cutoff_sha": "da2fa62658cb833cfc13fc75949aa62d11fb4338",
+  "view_digest": "9abac4ce5925d4d3423259dd9adf7386b21f6b64a38a7d3ee73cc522ce4359bd",
+  "future_probe_sha": "372de84ff02a01267d9e74891d588f737374b4d6"
+}

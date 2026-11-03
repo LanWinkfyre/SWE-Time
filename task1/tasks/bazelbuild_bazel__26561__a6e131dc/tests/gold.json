@@ -1,0 +1,7 @@
+{
+  "case_id": "bazelbuild_bazel__26561__a6e131dc",
+  "gold_sha": "029d01329f8f80c15ef555d2bc31eb370ff8e4d6",
+  "cutoff_sha": "0cd7a538d3c9a4e747e31cb96377b6ec104a1e68",
+  "view_digest": "4cd48fbf9b81bfade0da95178cbd56d900bba9789f09a0d829282b15d337ee97",
+  "future_probe_sha": "026f01ade687a10101ecfee0d3947239880b3a6d"
+}

@@ -1,0 +1,36 @@
+schema_version = "1.2"
+artifacts = ["/logs/verifier/detail.json"]
+
+[task]
+name        = "swe-time-backward/curl_curl__1703__ff8410e1"
+description = "Find the commit that introduced the regression reported in curl/curl#1703"
+keywords    = ["swe-time", "backward", "regression-localization", "curl/curl"]
+
+[metadata]
+benchmark  = "swe-time-backward"
+case_id    = "curl_curl__1703__ff8410e1"
+repo       = "curl/curl"
+issue_id   = "1703"
+cutoff_sha = "02c7a2ccabf3b21f881faacf286b4308c4ace1bc"
+locality   = "Local"
+boundary   = "High"
+subset     = "S3"
+
+[verifier]
+timeout_sec  = 900.0
+network_mode = "no-network"
+
+[agent]
+timeout_sec = 3600.0
+
+[environment]
+build_timeout_sec = 3600.0
+workdir           = "/testbed"
+cpus              = 4
+memory_mb         = 16384
+storage_mb        = 4096
+# The agent may reach only the hosts passed at run time with --allow-agent-host
+# (your model API) and --allow-environment-host (agent install sources).  The answer is
+# public on GitHub, so the default must not be open egress.
+network_mode      = "allowlist"
+allowed_hosts     = []

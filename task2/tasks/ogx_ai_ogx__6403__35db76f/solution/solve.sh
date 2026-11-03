@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Oracle: write the Gold answer.  Used to check that a task is solvable end to end.
+cat > /testbed/answer.json <<'EOF'
+{"case_id": "ogx_ai_ogx__6403__35db76f", "activated_workflows": [".github/workflows/ci-status.yml", ".github/workflows/codeql.yml", ".github/workflows/dependabot-constraints.yml", ".github/workflows/file-processors-tests.yml", ".github/workflows/integration-auth-tests.yml", ".github/workflows/integration-responses-conversations-auth-tests.yml", ".github/workflows/integration-sql-store-tests.yml", ".github/workflows/integration-tests-messages-clients.yml", ".github/workflows/integration-tests.yml", ".github/workflows/integration-vector-io-tests.yml", ".github/workflows/openapi-generator-validation.yml", ".github/workflows/pre-commit.yml", ".github/workflows/providers-build.yml", ".github/workflows/pypi.yml", ".github/workflows/record-integration-tests.yml", ".github/workflows/semantic-pr.yml", ".github/workflows/test-external.yml", ".github/workflows/trivy-security.yml", ".github/workflows/unit-tests.yml"]}
+EOF

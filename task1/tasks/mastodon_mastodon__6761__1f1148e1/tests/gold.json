@@ -1,0 +1,7 @@
+{
+  "case_id": "mastodon_mastodon__6761__1f1148e1",
+  "gold_sha": "2e8a492e8843aa958c53636b24cf4d344e7ca47d",
+  "cutoff_sha": "f5f165a5ebad5493a0d127c89b92876ffb75b0ef",
+  "view_digest": "26812c0e4cd72d3466061212577420e8fa5ca9d5f087758af7ba617e779ce15d",
+  "future_probe_sha": "051b649628d8039ff15f0c035c6f8fe5dbf045d6"
+}

@@ -1,0 +1,7 @@
+{
+  "case_id": "rust_lang_rust__71861__ab72cf77",
+  "gold_sha": "d8e3557dbae23283f81d7bc45200413dd93ced4a",
+  "cutoff_sha": "65b448273dd280401cd440a6740a7cd891525ba3",
+  "view_digest": "f812f3e4aa29981cbf76653c7a77414d6b454c6e6d0fc1807d5e4f65fcc69756",
+  "future_probe_sha": "a0c61a904482129989f5c1e5cb9f1008efb76f7f"
+}

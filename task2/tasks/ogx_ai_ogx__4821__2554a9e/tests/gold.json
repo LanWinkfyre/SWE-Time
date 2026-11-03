@@ -1,0 +1,8 @@
+{
+  "case_id": "ogx_ai_ogx__4821__2554a9e",
+  "gold_activated_workflows": [
+    ".github/workflows/pre-commit.yml",
+    ".github/workflows/pypi.yml",
+    ".github/workflows/semantic-pr.yml"
+  ]
+}

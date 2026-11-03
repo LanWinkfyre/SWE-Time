@@ -1,0 +1,7 @@
+# Pre-change working tree of emmercm/igir at a7b2c0ce26e31ebf3903765189c12c1ab03fcd9f, no git history.
+# rebuild/rebuild.py places the tree in ./repo next to this file, so the build context is this
+# environment/ directory (harbor's default).  Dockerfile.dockerignore is intentionally empty.
+FROM swe-time/base:1
+COPY repo /testbed/repo
+RUN python3 /opt/swe-time/tree_digest.py --repo /testbed/repo --stage baseline \
+        --out /opt/swe-time/receipt.json

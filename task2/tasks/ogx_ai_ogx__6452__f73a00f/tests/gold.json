@@ -1,0 +1,12 @@
+{
+  "case_id": "ogx_ai_ogx__6452__f73a00f",
+  "gold_activated_workflows": [
+    ".github/workflows/ci-status.yml",
+    ".github/workflows/codeql.yml",
+    ".github/workflows/pre-commit.yml",
+    ".github/workflows/pypi.yml",
+    ".github/workflows/semantic-pr.yml",
+    ".github/workflows/trivy-security.yml",
+    ".github/workflows/ui-unit-tests.yml"
+  ]
+}

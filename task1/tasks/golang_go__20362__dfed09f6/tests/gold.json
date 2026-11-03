@@ -1,0 +1,7 @@
+{
+  "case_id": "golang_go__20362__dfed09f6",
+  "gold_sha": "e4371fb179ad69cbd057f2430120843948e09f2f",
+  "cutoff_sha": "fca6ad45e25647d8d156a8ecd29137000408efeb",
+  "view_digest": "772ded52cb72094a1d7b56a6478c6659cac089c7453e7f11df0b5aaed459abca",
+  "future_probe_sha": "1d44c4e37847a975c40f8f15df7914939b540f6b"
+}

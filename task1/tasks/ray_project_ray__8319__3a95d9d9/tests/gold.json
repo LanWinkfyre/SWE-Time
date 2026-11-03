@@ -1,0 +1,7 @@
+{
+  "case_id": "ray_project_ray__8319__3a95d9d9",
+  "gold_sha": "83e06cd30a45245c2cb0e9f4bd924224b1581554",
+  "cutoff_sha": "cc7bd6650ae88aa7fd1ce43b0ca71c869c08557a",
+  "view_digest": "48153be2a31f864eaf262e572295d2584226e564d1ea3c77801f38e0a6b8d9c8",
+  "future_probe_sha": "14d03a0869eb6eb1cf7b49f3af36c4c139c0b75d"
+}

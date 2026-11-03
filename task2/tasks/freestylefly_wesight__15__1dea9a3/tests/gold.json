@@ -1,0 +1,10 @@
+{
+  "case_id": "freestylefly_wesight__15__1dea9a3",
+  "gold_activated_workflows": [
+    ".github/workflows/ci.yml",
+    ".github/workflows/electron-verify.yml",
+    ".github/workflows/labeler.yml",
+    ".github/workflows/openclaw-check.yml",
+    ".github/workflows/security.yml"
+  ]
+}

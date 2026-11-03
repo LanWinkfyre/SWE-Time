@@ -1,0 +1,7 @@
+{
+  "case_id": "python_cpython__99152__a2d619e6",
+  "gold_sha": "a918589578a2a807396c5f6afab7b59ab692c642",
+  "cutoff_sha": "8feb7ab77c80968a6de6079299a39b0494b1701b",
+  "view_digest": "9d1a02bd74a37154258356f6554ee116b51063fa73334760ce61c4a4e60b4309",
+  "future_probe_sha": "a0bc75e2fdd53680cb147881bcb3754bd56aa2fa"
+}

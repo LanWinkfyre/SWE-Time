@@ -1,0 +1,42 @@
+schema_version = "1.2"
+artifacts = ["/logs/verifier/detail.json"]
+
+[task]
+name        = "swe-time-forward/ogx_ai_ogx__4735__f596902"
+description = "Predict which CI workflows the fix for ogx-ai/ogx#4735 activates"
+keywords    = ["swe-time", "forward", "ci-routing", "ogx-ai/ogx"]
+
+[metadata]
+benchmark = "swe-time-forward"
+case_id   = "ogx_ai_ogx__4735__f596902"
+repo      = "ogx-ai/ogx"
+issue_id  = "4735"
+base_sha  = "f596902bf92634334cd9c75cf3986c2f78c8c6ee"
+temporal  = "T_high"
+spatial   = "S_high"
+
+[metadata.event_context]
+activity                  = "pull_request_update"
+action                    = "synchronize"
+base_ref                  = "main"
+draft                     = false
+activation_scope          = "direct"
+eligible_trigger_families = ["pull_request", "pull_request_target"]
+
+[verifier]
+timeout_sec  = 900.0
+network_mode = "no-network"
+
+[agent]
+timeout_sec = 3600.0
+
+[environment]
+build_timeout_sec = 1800.0
+workdir           = "/testbed"
+cpus              = 4
+memory_mb         = 8192
+# The agent may reach only the hosts passed at run time with --allow-agent-host
+# (your model API) and --allow-environment-host (agent install sources).  The fixing
+# pull request is public on GitHub, so the default must not be open egress.
+network_mode      = "allowlist"
+allowed_hosts     = []

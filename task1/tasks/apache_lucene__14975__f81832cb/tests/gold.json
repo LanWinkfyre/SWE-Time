@@ -1,0 +1,7 @@
+{
+  "case_id": "apache_lucene__14975__f81832cb",
+  "gold_sha": "81132d39a9a19e444078c2969a577403130312f2",
+  "cutoff_sha": "346d7624db510c3bc2cb9012f6a01f29d98ac5de",
+  "view_digest": "e64b8c84ab9b2842fc8cef0cdf05f70db199fd69a428a2846e4011e1daab325f",
+  "future_probe_sha": "182208e84b034b9634ce5e25393488b5f417f8df"
+}

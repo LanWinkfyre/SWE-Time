@@ -1,0 +1,7 @@
+{
+  "case_id": "doxygen_doxygen__8730__d8b2070f",
+  "gold_sha": "e03e2a29f9279deabe62d795b0db925a982d0eef",
+  "cutoff_sha": "0d28550e0d4f51b7f6296818d72d5c30543874ba",
+  "view_digest": "1a915471addaf008f1344763a9b55117750f67b1161ef743e7331e3dbdd35bc3",
+  "future_probe_sha": "afd308219d0f0ac764fe56922c3f492a2772fa13"
+}

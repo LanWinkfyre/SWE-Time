@@ -1,0 +1,7 @@
+{
+  "case_id": "pandas_dev_pandas__35931__066c53b0",
+  "gold_sha": "c6e3e158a0e361a918e47bb0db12e34c46bac998",
+  "cutoff_sha": "e3bcf8d1949833793ff50cca393240dab0f0d461",
+  "view_digest": "fcd8b7a13fe47b3b0490c6a824ce9aa21de2352b1a6f958e67117cbfee5f31f7",
+  "future_probe_sha": "a1f605697e44e7668b64841baf4ab2988470d08c"
+}

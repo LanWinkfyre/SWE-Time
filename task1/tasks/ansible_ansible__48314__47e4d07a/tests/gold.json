@@ -1,0 +1,7 @@
+{
+  "case_id": "ansible_ansible__48314__47e4d07a",
+  "gold_sha": "4ec2423a049551733f0f6a5d7be5202eb4a02d27",
+  "cutoff_sha": "17b3171917d85dd622bc96366bbdfecf8498718d",
+  "view_digest": "b8ab081978ff365d355f4381da5141973b1dbbb040d3d93532f5642d9ebb74fd",
+  "future_probe_sha": "0d068f1e3afe21a81295584bfb8ddd621bc54e8d"
+}

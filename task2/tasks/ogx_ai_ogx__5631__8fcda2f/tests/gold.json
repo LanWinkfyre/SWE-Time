@@ -1,0 +1,18 @@
+{
+  "case_id": "ogx_ai_ogx__5631__8fcda2f",
+  "gold_activated_workflows": [
+    ".github/workflows/ci-status.yml",
+    ".github/workflows/integration-auth-tests.yml",
+    ".github/workflows/integration-responses-conversations-auth-tests.yml",
+    ".github/workflows/integration-sql-store-tests.yml",
+    ".github/workflows/integration-tests.yml",
+    ".github/workflows/integration-vector-io-tests.yml",
+    ".github/workflows/pre-commit.yml",
+    ".github/workflows/providers-build.yml",
+    ".github/workflows/providers-list-deps.yml",
+    ".github/workflows/pypi.yml",
+    ".github/workflows/semantic-pr.yml",
+    ".github/workflows/test-external.yml",
+    ".github/workflows/unit-tests.yml"
+  ]
+}

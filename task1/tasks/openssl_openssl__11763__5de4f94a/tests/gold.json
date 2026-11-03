@@ -1,0 +1,7 @@
+{
+  "case_id": "openssl_openssl__11763__5de4f94a",
+  "gold_sha": "9f2058611f7aec733d4a476f4f28c895d9e5667b",
+  "cutoff_sha": "73d6b4efe6835a6c97ce61df6bf339b0903e5b7a",
+  "view_digest": "8f70434ac24f75873230b5b43d119a76c370959bddea00ea5b6d692147cf0413",
+  "future_probe_sha": "c7fa92979c5964966efa298bf2a40ff451ee7482"
+}

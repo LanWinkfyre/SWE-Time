@@ -1,0 +1,7 @@
+{
+  "case_id": "neovim_neovim__963__4b1dbf7e",
+  "gold_sha": "180c84ed378e694ebcd14198a7436e01462d2c4d",
+  "cutoff_sha": "e057676a89fb692f2569d7e586ea26d323428de4",
+  "view_digest": "47fb3e83cc6dd9ebbbebe44e1584581bf9d7265adae6d588969a622b58883806",
+  "future_probe_sha": "b92630c2fff7950141630f0d62b11404d0589ece"
+}

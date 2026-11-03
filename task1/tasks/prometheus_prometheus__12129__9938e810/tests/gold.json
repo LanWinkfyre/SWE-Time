@@ -1,0 +1,7 @@
+{
+  "case_id": "prometheus_prometheus__12129__9938e810",
+  "gold_sha": "5cfe759348d227a703afa6b68e14f78ba328b742",
+  "cutoff_sha": "6c008ec56af958debf4123d7cd58a6681d17303d",
+  "view_digest": "b79db1d3619ca268ce439b0bfaaa640bb310fb9ace5ec1c9523bb962f583af14",
+  "future_probe_sha": "bec68558ba991d28e706d3eaa0b2c4576ab9c9f6"
+}

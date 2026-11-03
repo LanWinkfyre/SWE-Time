@@ -1,0 +1,7 @@
+{
+  "case_id": "pingcap_tidb__64249__462daad8",
+  "gold_sha": "8c132db41986ed2143922d48ee0d1bac584b4ab8",
+  "cutoff_sha": "bce559b421ad7436c05f61f6222e11cb6c01adbe",
+  "view_digest": "96096f637115f088a64847c6704f5b5e660be967aa84e00ff91977aaab516ce6",
+  "future_probe_sha": "749c973e5a70e581bea535e980afe32adf5a3e11"
+}

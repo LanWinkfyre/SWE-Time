@@ -1,0 +1,8 @@
+# microsoft/TypeScript cut at c85e626d8e17427a6865521737b45ccbbe9c78ef: full history up to the cutoff, nothing after it.
+# rebuild/rebuild.py places the repository in ./repo next to this file, so the build context is
+# this environment/ directory.  Dockerfile.dockerignore is intentionally empty.
+FROM swe-time/base:1
+COPY repo /testbed/repo
+RUN git config --global --add safe.directory /testbed/repo \
+ && python3 /opt/swe-time/probe.py --repo /testbed/repo --future-probe 1efdcd9ff7d6566cf9bf10975b6fc8ffb0b53c9b \
+        --stage baseline --out /opt/swe-time/receipt.json

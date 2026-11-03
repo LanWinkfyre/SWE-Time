@@ -1,0 +1,7 @@
+{
+  "case_id": "scipy_scipy__23080__24481111",
+  "gold_sha": "ecd72a57d0c5d55a145ea159ac52d48ca71952c6",
+  "cutoff_sha": "7d936fa25e2e8fa74ec6399620dd6490e4dfb33e",
+  "view_digest": "681c1141124936ac44f76d5d74ae57e74e2c2f0ebeb655bd2c54b9d9d5ae73af",
+  "future_probe_sha": "c20c693f7a3e4819d258c68a8b69f660aefac6b1"
+}

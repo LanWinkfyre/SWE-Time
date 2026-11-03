@@ -1,0 +1,7 @@
+{
+  "case_id": "grafana_grafana__130484__6c9fcfe7",
+  "gold_sha": "d8776b9643acbd96f69a2af90734cd6058283da3",
+  "cutoff_sha": "e6cf001c19890a110b4f2677776988793d02f14a",
+  "view_digest": "8b17ff9486acc9daa94a6cb6422817c5b4c82beb6ea67df741ad147550444951",
+  "future_probe_sha": "4054c0644cde47008aafc6d5a5085a9197c3d020"
+}

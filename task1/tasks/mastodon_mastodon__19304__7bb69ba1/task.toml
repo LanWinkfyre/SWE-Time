@@ -1,0 +1,36 @@
+schema_version = "1.2"
+artifacts = ["/logs/verifier/detail.json"]
+
+[task]
+name        = "swe-time-backward/mastodon_mastodon__19304__7bb69ba1"
+description = "Find the commit that introduced the regression reported in mastodon/mastodon#19304"
+keywords    = ["swe-time", "backward", "regression-localization", "mastodon/mastodon"]
+
+[metadata]
+benchmark  = "swe-time-backward"
+case_id    = "mastodon_mastodon__19304__7bb69ba1"
+repo       = "mastodon/mastodon"
+issue_id   = "19304"
+cutoff_sha = "402ee73e24ea816ab1602405cd0046ecd5e7bfd5"
+locality   = "Cross"
+boundary   = "Low"
+subset     = "S2"
+
+[verifier]
+timeout_sec  = 900.0
+network_mode = "no-network"
+
+[agent]
+timeout_sec = 3600.0
+
+[environment]
+build_timeout_sec = 3600.0
+workdir           = "/testbed"
+cpus              = 4
+memory_mb         = 16384
+storage_mb        = 4096
+# The agent may reach only the hosts passed at run time with --allow-agent-host
+# (your model API) and --allow-environment-host (agent install sources).  The answer is
+# public on GitHub, so the default must not be open egress.
+network_mode      = "allowlist"
+allowed_hosts     = []

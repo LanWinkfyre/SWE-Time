@@ -1,0 +1,7 @@
+{
+  "case_id": "rails_rails__51853__a81ddfac",
+  "gold_sha": "68013b30d2f383177128b356c98ad449dcaf43f7",
+  "cutoff_sha": "d0ce794e2d9e6f40934c2467dbf057b5e2cba88c",
+  "view_digest": "c5da6f7bea2ac9f23be23610d6b34c8b4aebc4a704456440d96cac94497f81fd",
+  "future_probe_sha": "965b8c372ac0e19021f92cf798095af6046ab140"
+}

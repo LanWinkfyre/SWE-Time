@@ -1,0 +1,36 @@
+schema_version = "1.2"
+artifacts = ["/logs/verifier/detail.json"]
+
+[task]
+name        = "swe-time-backward/zephyrproject_rtos_zephyr__2102__91f5b4f7"
+description = "Find the commit that introduced the regression reported in zephyrproject-rtos/zephyr#2102"
+keywords    = ["swe-time", "backward", "regression-localization", "zephyrproject-rtos/zephyr"]
+
+[metadata]
+benchmark  = "swe-time-backward"
+case_id    = "zephyrproject_rtos_zephyr__2102__91f5b4f7"
+repo       = "zephyrproject-rtos/zephyr"
+issue_id   = "2102"
+cutoff_sha = "6a1474e75b86d65e9bf2ddf7d61c076079fe89a9"
+locality   = "Local"
+boundary   = "High"
+subset     = "S3"
+
+[verifier]
+timeout_sec  = 900.0
+network_mode = "no-network"
+
+[agent]
+timeout_sec = 3600.0
+
+[environment]
+build_timeout_sec = 3600.0
+workdir           = "/testbed"
+cpus              = 4
+memory_mb         = 16384
+storage_mb        = 4096
+# The agent may reach only the hosts passed at run time with --allow-agent-host
+# (your model API) and --allow-environment-host (agent install sources).  The answer is
+# public on GitHub, so the default must not be open egress.
+network_mode      = "allowlist"
+allowed_hosts     = []

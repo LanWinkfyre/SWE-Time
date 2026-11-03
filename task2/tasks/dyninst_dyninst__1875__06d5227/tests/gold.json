@@ -1,0 +1,7 @@
+{
+  "case_id": "dyninst_dyninst__1875__06d5227",
+  "gold_activated_workflows": [
+    ".github/workflows/libabigail.yaml",
+    ".github/workflows/pr-tests.yaml"
+  ]
+}

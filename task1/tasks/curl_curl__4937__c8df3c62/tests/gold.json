@@ -1,0 +1,7 @@
+{
+  "case_id": "curl_curl__4937__c8df3c62",
+  "gold_sha": "e59371a4936f8e7e2187b09a08d34d9a4c278657",
+  "cutoff_sha": "4a4b63daaa01ef59b131d91e8e6e6dfe275c0f08",
+  "view_digest": "113aaf40cb320121199407fd1ce2ed3076d144ad4adcece9a356bd536921b547",
+  "future_probe_sha": "3ea15be3f3d6c77adc9fe22ad0b0208466d622d1"
+}

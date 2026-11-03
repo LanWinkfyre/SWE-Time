@@ -1,0 +1,9 @@
+{
+  "case_id": "data_prep_kit_data_prep_kit__1432__7dace62",
+  "gold_activated_workflows": [
+    ".github/workflows/test-misc.yml",
+    ".github/workflows/test-universal-tokenization-kfp.yml",
+    ".github/workflows/test-universal-tokenization.yml",
+    ".github/workflows/test-universal-tokenization2arrow.yml"
+  ]
+}

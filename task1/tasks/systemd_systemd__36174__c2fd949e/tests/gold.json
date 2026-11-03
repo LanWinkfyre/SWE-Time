@@ -1,0 +1,7 @@
+{
+  "case_id": "systemd_systemd__36174__c2fd949e",
+  "gold_sha": "193bf42ab0721384570bb6913e5f38385a9105e7",
+  "cutoff_sha": "126f545a010ad4304fbcfb45c6893e7cb2f430fb",
+  "view_digest": "aa25d3bf828a0d44100e797a83785d99ec503d3ea6c0f4d32833c3f10b367c70",
+  "future_probe_sha": "fc55da3d7c6fe7efa18f4341f581ef0c4f41803b"
+}

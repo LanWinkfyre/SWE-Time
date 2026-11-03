@@ -1,0 +1,13 @@
+{
+  "case_id": "ogx_ai_ogx__4712__1e5e9f5",
+  "gold_activated_workflows": [
+    ".github/workflows/ci-status.yml",
+    ".github/workflows/integration-tests.yml",
+    ".github/workflows/openapi-generator-validation.yml",
+    ".github/workflows/pre-commit.yml",
+    ".github/workflows/pypi.yml",
+    ".github/workflows/semantic-pr.yml",
+    ".github/workflows/stainless-builds.yml",
+    ".github/workflows/unit-tests.yml"
+  ]
+}

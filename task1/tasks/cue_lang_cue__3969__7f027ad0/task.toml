@@ -1,0 +1,36 @@
+schema_version = "1.2"
+artifacts = ["/logs/verifier/detail.json"]
+
+[task]
+name        = "swe-time-backward/cue_lang_cue__3969__7f027ad0"
+description = "Find the commit that introduced the regression reported in cue-lang/cue#3969"
+keywords    = ["swe-time", "backward", "regression-localization", "cue-lang/cue"]
+
+[metadata]
+benchmark  = "swe-time-backward"
+case_id    = "cue_lang_cue__3969__7f027ad0"
+repo       = "cue-lang/cue"
+issue_id   = "3969"
+cutoff_sha = "c92590272bc2b44e8e58b8f7e878281ba19c067b"
+locality   = "Cross"
+boundary   = "Low"
+subset     = "S2"
+
+[verifier]
+timeout_sec  = 900.0
+network_mode = "no-network"
+
+[agent]
+timeout_sec = 3600.0
+
+[environment]
+build_timeout_sec = 3600.0
+workdir           = "/testbed"
+cpus              = 4
+memory_mb         = 16384
+storage_mb        = 4096
+# The agent may reach only the hosts passed at run time with --allow-agent-host
+# (your model API) and --allow-environment-host (agent install sources).  The answer is
+# public on GitHub, so the default must not be open egress.
+network_mode      = "allowlist"
+allowed_hosts     = []

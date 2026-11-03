@@ -1,0 +1,36 @@
+schema_version = "1.2"
+artifacts = ["/logs/verifier/detail.json"]
+
+[task]
+name        = "swe-time-backward/vim_vim__934__535b6035"
+description = "Find the commit that introduced the regression reported in vim/vim#934"
+keywords    = ["swe-time", "backward", "regression-localization", "vim/vim"]
+
+[metadata]
+benchmark  = "swe-time-backward"
+case_id    = "vim_vim__934__535b6035"
+repo       = "vim/vim"
+issue_id   = "934"
+cutoff_sha = "f562e72df726c6191fa305e1c0a113f1cfb87f76"
+locality   = "Local"
+boundary   = "Low"
+subset     = "S1"
+
+[verifier]
+timeout_sec  = 900.0
+network_mode = "no-network"
+
+[agent]
+timeout_sec = 3600.0
+
+[environment]
+build_timeout_sec = 3600.0
+workdir           = "/testbed"
+cpus              = 4
+memory_mb         = 16384
+storage_mb        = 4096
+# The agent may reach only the hosts passed at run time with --allow-agent-host
+# (your model API) and --allow-environment-host (agent install sources).  The answer is
+# public on GitHub, so the default must not be open egress.
+network_mode      = "allowlist"
+allowed_hosts     = []

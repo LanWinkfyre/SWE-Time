@@ -1,0 +1,36 @@
+schema_version = "1.2"
+artifacts = ["/logs/verifier/detail.json"]
+
+[task]
+name        = "swe-time-backward/dotnet_runtime__110751__fbfaf89e"
+description = "Find the commit that introduced the regression reported in dotnet/runtime#110751"
+keywords    = ["swe-time", "backward", "regression-localization", "dotnet/runtime"]
+
+[metadata]
+benchmark  = "swe-time-backward"
+case_id    = "dotnet_runtime__110751__fbfaf89e"
+repo       = "dotnet/runtime"
+issue_id   = "110751"
+cutoff_sha = "b33f75519ea498df81b38fab75c4813b03c9a3e3"
+locality   = "Cross"
+boundary   = "Low"
+subset     = "S2"
+
+[verifier]
+timeout_sec  = 900.0
+network_mode = "no-network"
+
+[agent]
+timeout_sec = 3600.0
+
+[environment]
+build_timeout_sec = 3600.0
+workdir           = "/testbed"
+cpus              = 4
+memory_mb         = 16384
+storage_mb        = 6144
+# The agent may reach only the hosts passed at run time with --allow-agent-host
+# (your model API) and --allow-environment-host (agent install sources).  The answer is
+# public on GitHub, so the default must not be open egress.
+network_mode      = "allowlist"
+allowed_hosts     = []

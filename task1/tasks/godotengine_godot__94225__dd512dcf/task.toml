@@ -1,0 +1,36 @@
+schema_version = "1.2"
+artifacts = ["/logs/verifier/detail.json"]
+
+[task]
+name        = "swe-time-backward/godotengine_godot__94225__dd512dcf"
+description = "Find the commit that introduced the regression reported in godotengine/godot#94225"
+keywords    = ["swe-time", "backward", "regression-localization", "godotengine/godot"]
+
+[metadata]
+benchmark  = "swe-time-backward"
+case_id    = "godotengine_godot__94225__dd512dcf"
+repo       = "godotengine/godot"
+issue_id   = "94225"
+cutoff_sha = "383a6e4ef285fddcb0e1cbe28a20332c7e5a815b"
+locality   = "Cross"
+boundary   = "High"
+subset     = "S4"
+
+[verifier]
+timeout_sec  = 900.0
+network_mode = "no-network"
+
+[agent]
+timeout_sec = 3600.0
+
+[environment]
+build_timeout_sec = 3600.0
+workdir           = "/testbed"
+cpus              = 4
+memory_mb         = 16384
+storage_mb        = 4096
+# The agent may reach only the hosts passed at run time with --allow-agent-host
+# (your model API) and --allow-environment-host (agent install sources).  The answer is
+# public on GitHub, so the default must not be open egress.
+network_mode      = "allowlist"
+allowed_hosts     = []

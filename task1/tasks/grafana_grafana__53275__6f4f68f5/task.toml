@@ -1,0 +1,36 @@
+schema_version = "1.2"
+artifacts = ["/logs/verifier/detail.json"]
+
+[task]
+name        = "swe-time-backward/grafana_grafana__53275__6f4f68f5"
+description = "Find the commit that introduced the regression reported in grafana/grafana#53275"
+keywords    = ["swe-time", "backward", "regression-localization", "grafana/grafana"]
+
+[metadata]
+benchmark  = "swe-time-backward"
+case_id    = "grafana_grafana__53275__6f4f68f5"
+repo       = "grafana/grafana"
+issue_id   = "53275"
+cutoff_sha = "fe0f19318989bd3616f68ce7546e68a4c2d6cc5f"
+locality   = "Local"
+boundary   = "High"
+subset     = "S3"
+
+[verifier]
+timeout_sec  = 900.0
+network_mode = "no-network"
+
+[agent]
+timeout_sec = 3600.0
+
+[environment]
+build_timeout_sec = 3600.0
+workdir           = "/testbed"
+cpus              = 4
+memory_mb         = 16384
+storage_mb        = 4096
+# The agent may reach only the hosts passed at run time with --allow-agent-host
+# (your model API) and --allow-environment-host (agent install sources).  The answer is
+# public on GitHub, so the default must not be open egress.
+network_mode      = "allowlist"
+allowed_hosts     = []

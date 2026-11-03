@@ -1,0 +1,10 @@
+{
+  "case_id": "fallow_rs_fallow__2107__9a3ae14",
+  "gold_activated_workflows": [
+    ".github/workflows/ci.yml",
+    ".github/workflows/commitlint.yml",
+    ".github/workflows/coverage.yml",
+    ".github/workflows/dependabot-auto-merge.yml",
+    ".github/workflows/test-action.yml"
+  ]
+}

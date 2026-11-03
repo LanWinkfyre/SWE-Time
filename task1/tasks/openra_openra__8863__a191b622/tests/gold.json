@@ -1,0 +1,7 @@
+{
+  "case_id": "openra_openra__8863__a191b622",
+  "gold_sha": "fc8a34a7a2684dbe317e6dc25a4b7ccde65812e1",
+  "cutoff_sha": "33e779f4c0d75366e41400dc98885afd3dbf6db7",
+  "view_digest": "675fe7331bc16afe891c04320749d249db633881c38300c2667037d224cd740f",
+  "future_probe_sha": "9d32667d1543170fd14d57f865039f86fd706b17"
+}
