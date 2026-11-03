@@ -5,12 +5,12 @@ directions:
 
 | Task | Directory | Cases | Repos | Question | Answer | Metric |
 |---|---|--:|--:|---|---|---|
-| **Backward** | `task1/` | 631 | 49 | Given a regression report and the repository history up to the report, which commit introduced the regression? | `/testbed/answer.txt`: the 40-char SHA of the first bad commit | Exact |
-| **Forward** | `task2/` | 1030 | 16 | Given an issue and the repository just before it was fixed, which GitHub Actions workflows will the fixing pull request activate? | `/testbed/answer.json`: `{"activated_workflows": [...]}` | Workflow Exact |
+| **Backward** | `task_backward/` | 631 | 49 | Given a regression report and the repository history up to the report, which commit introduced the regression? | `/testbed/answer.txt`: the 40-char SHA of the first bad commit | Exact |
+| **Forward** | `task_forward/` | 1030 | 16 | Given an issue and the repository just before it was fixed, which GitHub Actions workflows will the fixing pull request activate? | `/testbed/answer.json`: `{"activated_workflows": [...]}` | Workflow Exact |
 
 Every case comes from a real issue and its real fix. Gold is deterministic: Backward Gold is the
 first-bad-commit SHA, and Forward Gold is computed from the repository's own workflow YAML by a
-rule-based evaluator (`task2/evaluator/`). No model is used to judge answers.
+rule-based evaluator (`task_forward/evaluator/`). No model is used to judge answers.
 
 Tasks are in [Harbor](https://github.com/harbor-framework/harbor) format. This repository
 ships the task definitions, Gold, verifiers and scorers, plus scripts that rebuild each case's
@@ -20,13 +20,13 @@ repository from public GitHub. It does not ship repository contents or prebuilt 
 
 ```
 base_image/          shared base image (python:3.11-slim + git, ripgrep)
-task1/               Backward
+task_backward/       Backward
   tasks/<case>/      instruction.md, task.toml, environment/Dockerfile, tests/, solution/
   manifest.jsonl     one line per case: repo, cutoff_sha, labels, integrity digests
   rebuild/           rebuild.py (+ artifacts.py, the rules for hidden changelog files)
   verifier/          grade.py, probe.py, test.sh (copied into every task's tests/)
   score.py           batch scorer
-task2/               Forward
+task_forward/        Forward
   tasks/<case>/      same layout as above
   manifest.jsonl     one line per case: repo, base_sha, base_ref, labels, tree_digest
   rebuild/           rebuild.py
@@ -56,12 +56,12 @@ the task's Dockerfile expects.
 
 ```bash
 # Forward: export the tree at base_sha (no .git) and check its tree digest
-python3 task2/rebuild/rebuild.py --manifest task2/manifest.jsonl --tasks task2/tasks \
+python3 task_forward/rebuild/rebuild.py --manifest task_forward/manifest.jsonl --tasks task_forward/tasks \
     --mirrors mirrors/ --jobs 4
 
 # Backward: clone up to cutoff_sha, strip everything after it, hide changelog files,
 # then self-check (HEAD, single ref, no post-cutoff objects, view digest)
-python3 task1/rebuild/rebuild.py --manifest task1/manifest.jsonl --tasks task1/tasks \
+python3 task_backward/rebuild/rebuild.py --manifest task_backward/manifest.jsonl --tasks task_backward/tasks \
     --mirrors mirrors/ --jobs 2
 ```
 
@@ -74,7 +74,7 @@ rewritten.
 With Harbor installed, run a task directory with the Docker environment:
 
 ```bash
-harbor run --env docker --path task2/tasks -a <agent> -m <model> \
+harbor run --env docker --path task_forward/tasks -a <agent> -m <model> \
     --allow-agent-host <your-model-api-host> -n 4
 ```
 
@@ -86,7 +86,7 @@ for both tasks the answer can be found on GitHub.
 To check a task end to end without a model, run the oracle, which writes the Gold answer:
 
 ```bash
-harbor run --env docker --path task2/tasks -a oracle -n 4
+harbor run --env docker --path task_forward/tasks -a oracle -n 4
 ```
 
 Each trial's verifier writes `reward.txt` (1 or 0) and `detail.json` (outcome and audit).
@@ -98,10 +98,10 @@ directory:
 
 ```bash
 # Backward: preds/<case>.txt containing the SHA
-python3 task1/score.py --tasks task1/tasks --predictions preds/ --manifest task1/manifest.jsonl
+python3 task_backward/score.py --tasks task_backward/tasks --predictions preds/ --manifest task_backward/manifest.jsonl
 
 # Forward: preds/<case>.json, same schema as /testbed/answer.json
-python3 task2/score.py --tasks task2/tasks --predictions preds/ --manifest task2/manifest.jsonl
+python3 task_forward/score.py --tasks task_forward/tasks --predictions preds/ --manifest task_forward/manifest.jsonl
 ```
 
 The scorers report the overall Exact, the per-repository Exact, the repository-macro average and
@@ -124,7 +124,7 @@ fixed for every case: the fixing pull request receives a `synchronize` event on 
 default branch; only the `pull_request` and `pull_request_target` triggers are considered, with
 their `types`, `branches`, `branches-ignore`, `paths` and `paths-ignore` filters. Path filters follow
 GitHub's rules (patterns are matched from the repository root, `*` does not cross `/`, and a later
-`!` pattern excludes). `python3 task2/evaluator/test_gold_routing.py` runs the evaluator's tests.
+`!` pattern excludes). `python3 task_forward/evaluator/test_gold_routing.py` runs the evaluator's tests.
 
 ## Difficulty labels
 
