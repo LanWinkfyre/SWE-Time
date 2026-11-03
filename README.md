@@ -1,4 +1,7 @@
-# SWE-Time
+# SWE-Time: Benchmarking Temporal Repository Understanding
+
+This is the official repository of the benchmark introduced in the paper
+**SWE-Time: Benchmarking Temporal Repository Understanding**.
 
 SWE-Time evaluates whether coding agents can reason about a repository across time, in two
 directions:
