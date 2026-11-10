@@ -1,10 +1,24 @@
-# SWE-Time: Benchmarking Temporal Repository Understanding
+<h1 align="center">SWE-Time: Benchmarking Temporal Repository Understanding</h1>
+
+<p align="center">
+  <a href="task_backward/manifest.jsonl"><img src="https://img.shields.io/badge/Backward-631_cases-2563EB?style=flat-square&amp;logo=git&amp;logoColor=white" alt="Backward: 631 cases"></a>
+  <a href="task_forward/manifest.jsonl"><img src="https://img.shields.io/badge/Forward-1030_cases-0F766E?style=flat-square&amp;logo=githubactions&amp;logoColor=white" alt="Forward: 1030 cases"></a>
+  <a href="https://github.com/harbor-framework/harbor"><img src="https://img.shields.io/badge/Harbor-Task_Format-6D28D9?style=flat-square&amp;logo=github&amp;logoColor=white" alt="Harbor task format"></a>
+</p>
+
+<p align="center">
+  <a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-3.10%2B-3776AB?style=flat-square&amp;logo=python&amp;logoColor=white" alt="Python 3.10 or newer"></a>
+  <a href="https://www.docker.com/"><img src="https://img.shields.io/badge/Docker-Required-2496ED?style=flat-square&amp;logo=docker&amp;logoColor=white" alt="Docker required"></a>
+  <a href="https://git-scm.com/"><img src="https://img.shields.io/badge/Git-Required-F05032?style=flat-square&amp;logo=git&amp;logoColor=white" alt="Git required"></a>
+</p>
 
 This is the official repository of the benchmark introduced in the paper
 **SWE-Time: Benchmarking Temporal Repository Understanding**.
 
 SWE-Time evaluates whether coding agents can reason about a repository across time, in two
 directions:
+
+## 🧭 Benchmark overview
 
 | Task | Directory | Cases | Repos | Question | Answer | Metric |
 |---|---|--:|--:|---|---|---|
@@ -19,7 +33,15 @@ Tasks are in [Harbor](https://github.com/harbor-framework/harbor) format. This r
 ships the task definitions, Gold, verifiers and scorers, plus scripts that rebuild each case's
 repository from public GitHub. It does not ship repository contents or prebuilt images.
 
-## Layout
+```mermaid
+flowchart LR
+    B["Regression report + repository history"] --> C["Backward: identify the first bad commit"]
+    F["Issue + repository before the fix"] --> W["Forward: predict activated workflows"]
+    C --> V["Deterministic verification"]
+    W --> V
+```
+
+## 📂 Repository layout
 
 ```
 base_image/          shared base image (python:3.11-slim + git, ripgrep)
@@ -38,7 +60,7 @@ task_forward/        Forward
   score.py           batch scorer
 ```
 
-## Requirements
+## ⚙️ Requirements
 
 - Linux with Docker, Python 3.10+ and git.
 - Network access to github.com for rebuilding repositories.
@@ -46,13 +68,13 @@ task_forward/        Forward
   large ones (llvm-project, rust, kubernetes); plan for several hundred GB, or rebuild a subset
   with `--cases`.
 
-## 1. Build the base image
+## 🐳 1. Build the base image
 
 ```bash
 docker build -t swe-time/base:1 base_image/
 ```
 
-## 2. Rebuild the repositories
+## 🛠️ 2. Rebuild the repositories
 
 Each case's repository is written to `tasks/<case>/environment/repo`, which is the build context
 the task's Dockerfile expects.
@@ -72,7 +94,7 @@ Add `--cases <id> ...` to rebuild a subset. A case that fails its integrity chec
 `FAIL` and must not be evaluated. This happens if the upstream repository has been deleted or
 rewritten.
 
-## 3. Run an agent
+## 🚀 3. Run an agent
 
 With Harbor installed, run a task directory with the Docker environment:
 
@@ -94,7 +116,7 @@ harbor run --env docker --path task_forward/tasks -a oracle -n 4
 
 Each trial's verifier writes `reward.txt` (1 or 0) and `detail.json` (outcome and audit).
 
-## 4. Score
+## 📊 4. Score
 
 If you ran the agent through your own harness, collect one answer file per case and score the
 directory:
@@ -111,7 +133,7 @@ The scorers report the overall Exact, the per-repository Exact, the repository-m
 the difficulty-stratified scores (Backward S1–S4, Forward Temporal × Spatial). Every task counts in
 the denominator; a missing or invalid answer scores 0.
 
-## Scoring rules
+## 🎯 Scoring rules
 
 **Backward.** The answer must be exactly one 40-character lowercase SHA equal to Gold. An
 ancestor or descendant of the Gold commit does not count. Before reading the answer, the verifier
@@ -129,7 +151,7 @@ their `types`, `branches`, `branches-ignore`, `paths` and `paths-ignore` filters
 GitHub's rules (patterns are matched from the repository root, `*` does not cross `/`, and a later
 `!` pattern excludes). `python3 task_forward/evaluator/test_gold_routing.py` runs the evaluator's tests.
 
-## Difficulty labels
+## 🏷️ Difficulty labels
 
 - **Backward**: *Locality* says whether the commit that introduced the bug touches the same
   component as the reported failure (Local) or a different one (Cross). *Boundary* says whether
