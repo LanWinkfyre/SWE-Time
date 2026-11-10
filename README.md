@@ -1,6 +1,7 @@
 <h1 align="center">SWE-Time: Benchmarking Temporal Repository Understanding</h1>
 
 <p align="center">
+  <a href="https://arxiv.org/abs/2611.12083"><img src="https://img.shields.io/badge/arXiv-2611.12083-B31B1B?style=flat-square&amp;logo=arxiv&amp;logoColor=white" alt="arXiv: 2611.12083"></a>
   <a href="task_backward/manifest.jsonl"><img src="https://img.shields.io/badge/Backward-631_cases-2563EB?style=flat-square&amp;logo=git&amp;logoColor=white" alt="Backward: 631 cases"></a>
   <a href="task_forward/manifest.jsonl"><img src="https://img.shields.io/badge/Forward-1030_cases-0F766E?style=flat-square&amp;logo=githubactions&amp;logoColor=white" alt="Forward: 1030 cases"></a>
   <a href="https://github.com/harbor-framework/harbor"><img src="https://img.shields.io/badge/Harbor-Task_Format-6D28D9?style=flat-square&amp;logo=github&amp;logoColor=white" alt="Harbor task format"></a>
@@ -40,6 +41,14 @@ flowchart LR
     C --> V["Deterministic verification"]
     W --> V
 ```
+
+## 📊 Main results
+
+Results from [Table 2 of the paper](https://arxiv.org/pdf/2611.12083): Claude Code is the main
+evaluation harness, while Codex results are supplementary references. **SWE-Time Avg.** is the
+average of the Backward and Forward overall scores.
+
+[![Table 2: SWE-Time performance on the Backward and Forward tasks under Claude Code and Codex](assets/readme/main-results.png)](https://arxiv.org/pdf/2611.12083)
 
 ## 📂 Repository layout
 
